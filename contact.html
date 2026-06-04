@@ -27,38 +27,55 @@
     <h2 class="section-title">Get In Touch</h2>
     <p class="section-sub">Open to internships, research collaborations, and interesting conversations.</p>
 
-    <div>
+    <!-- Utilizing your native .grid class to map items side-by-side -->
+    <div class="grid" style="margin-top: 2rem;">
 
-      <!-- Social / direct links -->
-      <div>
-        <h3 style="margin-bottom:1.2rem;">Find Me Online</h3>
-        <div class="social-links">
-
-          <a href="https://github.com/jmmire1" class="social-link" target="_blank" rel="noopener">
-            <span class="social-icon">&#x1F4BB;</span>
-            <div>
-              <strong>GitHub</strong>
-              <div style="font-size:.82rem;color:var(--muted);">github.com/jmire1</div>
-            </div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/joseph-mire/" class="social-link" target="_blank" rel="noopener">
-            <span class="social-icon">&#x1F517;</span>
-            <div>
-              <strong>LinkedIn</strong>
-              <div style="font-size:.82rem;color:var(--muted);">linkedin.com/in/joseph-mire/</div>
-            </div>
-          </a>
-
-          <a href="mailto:jmmire@crimson.ua.edu" class="social-link">
-            <span class="social-icon">&#x2709;&#xFE0F;</span>
-            <div>
-              <strong>Email</strong>
-              <div style="font-size:.82rem;color:var(--muted);">jmmire@crimson.ua.edu</div>
-            </div>
-          </a>
-
+      <!-- Card 1: GitHub -->
+      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;">
+        <div style="width: 100%;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#x1F4BB;</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text);">GitHub</h3>
+          <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.2rem;">
+            Explore my open-source repositories, personal engineering projects, and full codebase history.
+          </p>
+          <!-- Displayed Handle -->
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.5rem 0.75rem; font-family: monospace; font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; word-break: break-all;">
+            github.com/jmmire1
+          </div>
         </div>
+        <a href="https://github.com/jmmire1" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%; text-align: center;">View Profile</a>
+      </div>
+
+      <!-- Card 2: LinkedIn -->
+      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;">
+        <div style="width: 100%;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#x1F517;</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text);">LinkedIn</h3>
+          <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.2rem;">
+            Connect with me professionally, view my academic timeline, and follow my industry updates.
+          </p>
+          <!-- Displayed Handle -->
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.5rem 0.75rem; font-family: monospace; font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; word-break: break-all;">
+            linkedin.com/in/joseph-mire
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/joseph-mire/" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%; text-align: center;">Let's Connect</a>
+      </div>
+
+      <!-- Card 3: Email -->
+      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;">
+        <div style="width: 100%;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#x2709;&#xFE0F;</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text);">Email</h3>
+          <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.2rem;">
+            Reach out directly for internships, formal academic inquiries, or general technical discussions.
+          </p>
+          <!-- Displayed Handle -->
+          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.5rem 0.75rem; font-family: monospace; font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; word-break: break-all;">
+            jmmire@crimson.ua.edu
+          </div>
+        </div>
+        <a href="mailto:jmmire@crimson.ua.edu" class="btn" style="width: 100%; text-align: center; border: none; cursor: pointer;">Send Email</a>
       </div>
 
     </div>
