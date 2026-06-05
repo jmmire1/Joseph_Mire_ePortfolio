@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Overview — Joseph Mire</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23161f38%22 stroke=%22%2324324f%22 stroke-width=%224%22/><text y=%2268%22 x=%2250%22 font-family=%22'Fira Code', monospace%22 font-weight=%22900%22 font-size=%2252%22 fill=%22%2300ff9d%22 text-anchor=%22middle%22 letter-spacing=%22-2%22>JM</text></svg>">
+  <style>
+    /* Specialized utility classes to replicate the quad chart layout from image_7f2cda.png */
+    .quad-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card-bg, #161f38);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .quadrant {
+      padding: 2.5rem;
+      min-height: 280px;
+    }
+
+    /* Distinct quadrant borders matching the visual intersecting crosshairs */
+    .quad-top-left {
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .quad-top-right {
+      border-bottom: 1px solid var(--border);
+    }
+    .quad-bottom-left {
+      border-right: 1px solid var(--border);
+    }
+
+    .quadrant h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      color: var(--text);
+    }
+
+    /* Bullet point indicator style matching the image reference */
+    .quadrant h3::before {
+      content: "•";
+      color: var(--accent, #00ff9d);
+      font-size: 2rem;
+      margin-right: 0.5rem;
+      line-height: 1;
+    }
+
+    .quadrant ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .quadrant li, .quadrant p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .quad-example {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      opacity: 0.8;
+      font-style: italic;
+    }
+
+    /* Responsive adjustments for smaller viewport profiles */
+    @media (max-width: 768px) {
+      .quad-container {
+        grid-template-columns: 1fr;
+      }
+      .quad-top-left, .quad-top-right, .quad-bottom-left {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <input type="checkbox" id="nav-toggle" />
+  <div class="nav-inner">
+    <span class="nav-brand">Joseph Mire</span>
+    <label class="nav-toggle-label" for="nav-toggle"><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" style="border-left: 4px solid var(--accent, #00ff9d); padding-left: 1rem;">Project Overview</h2>
+    
+    <!-- Quad Chart Grid Layout Mapping -->
+    <div class="quad-container">
+      
+      <!-- Top Left Quadrant: Objectives -->
+      <div class="quadrant quad-top-left">
+        <h3>Objectives</h3>
+        <ul>
+          <li>I am doing this work to improve the power efficiency of the portable potentiostat board to enhance its real-world usability.</li>
+          <li>Otherwise, this board will lose power during use.</li>
+          <li>The problem I am trying to address is the sensor dying while in operation.</li>
+        </ul>
+      </div>
+
+      <!-- Top Right Quadrant: Technical Approach -->
+      <div class="quadrant quad-top-right">
+        <h3>Technical Approach</h3>
+        <ul>
+            <li>I am doing this work by inspecting the data sheets of the LMP91000 and EFR32 and utilizing the built-in power modes. 
+                I will also explore time delays in transmitting data over Bluetooth to improve power efficiency.
+            </li>
+        </ul>
+      </div>
+
+      <!-- Bottom Left Quadrant: Research Directions -->
+      <div class="quadrant quad-bottom-left">
+        <h3>Research Directions</h3>
+        <ul>
+            <li>There is information on the internet about power optimizing embedded systems. However, the methods are fairly complicated.</li>
+            <li>I will implement the power optimization techniques in this potentiostat project.</li>
+        </ul>
+      </div>
+
+      <!-- Bottom Right Quadrant: Expected Accomplishments -->
+      <div class="quadrant">
+        <h3>Expected Accomplishments</h3>
+        <ul>
+            <li>The goal of this research is to improve the maximum time this device can be used without needing to be recharged.</li>
+            <li>This device needs a decent battery life to be applicable in the field.</li>
+        </ul>
+      </div>
+
+    </div><!-- /.quad-container -->
+
+  </div>
+</section>
+
+<footer>
+  <p>Built with plain HTML &amp; CSS &mdash; hosted free on GitHub Pages.</p>
+  <p style="margin-top:.4rem;">
+    <a href="https://github.com/jmmire1">GitHub</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/joseph-mire/">LinkedIn</a>
+  </p>
+</footer>
+
+</body>
+</html>
