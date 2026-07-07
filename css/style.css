@@ -366,6 +366,7 @@ footer a:hover{color:var(--green)}
 .nav-burger span::before{content:'';margin-top:-7px;position:relative;top:-5px}
 .nav-burger span::after{content:'';position:relative;top:3px}
 
+
 @media (max-width:680px){
   /* clear side margins on small screens */
   .wrap,.nav{padding-left:1.4rem;padding-right:1.4rem}
@@ -388,7 +389,12 @@ footer a:hover{color:var(--green)}
 
   /* hero: tighter, no squished flight path labels */
   .hero-inner{padding:1.5rem 1.4rem 3rem;gap:2rem}
-  .hero h1{font-size:clamp(3.6rem,19vw,5rem);margin-left:0}
+  .hero h1{
+    font-family:var(--display);font-weight:800;
+    font-size:clamp(3.8rem, 12vw, 11.5rem); /* Lowered the mid-range scaling slightly */
+    line-height:.85;letter-spacing:.005em;text-transform:uppercase;
+    margin:.5rem 0 0 -.04em;
+  }
   .flight{height:22%;opacity:.65}
   .flight text{display:none}
   .plate{width:100%;max-width:320px;margin:0 auto;justify-self:center}
