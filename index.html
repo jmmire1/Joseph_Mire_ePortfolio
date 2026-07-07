@@ -1,113 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joseph Mire</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23161f38%22 stroke=%22%2324324f%22 stroke-width=%224%22/><text y=%2268%22 x=%2250%22 font-family=%22'Fira Code', monospace%22 font-weight=%22900%22 font-size=%2252%22 fill=%22%2300ff9d%22 text-anchor=%22middle%22 letter-spacing=%22-2%22>JM</text></svg>">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joseph Mire — Computer Engineering</title>
+<meta name="description" content="Joseph Mire — Computer Engineering student at the University of Alabama. FPV drones, embedded systems, and homelab infrastructure." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%23181C20%22/><text y=%2270%22 x=%2250%22 font-family=%22Arial Narrow, sans-serif%22 font-weight=%22800%22 font-size=%2250%22 fill=%22%232EE889%22 text-anchor=%22middle%22>JM</text></svg>">
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<nav>
-  <input type="checkbox" id="nav-toggle" />
-  <div class="nav-inner">
-    <span class="nav-brand">Joseph Mire</span>
-    <label class="nav-toggle-label" for="nav-toggle">
-      <span></span>
-    </label>
+<!-- ── Nav ── -->
+<header>
+  <nav class="nav" aria-label="Main">
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <a class="brand" href="#top">JOSEPH<em>_</em>MIRE</a>
+    <label class="nav-burger" for="nav-toggle" aria-label="Menu"><span></span></label>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-cta" href="resume.pdf" download>Resume ↓</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
+</header>
 
 <!-- ── Hero ── -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Joseph Mire</span></h1>
-      <p>
-        I am a Computer Engineering student at the University of Alabama minoring
-        in Math and Computer Science. I am passionate about the intersection of hardware
-        and software, focusing much of my attention on building and flying FPV drones
-        and working with embedded systems.
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="tag stage d1"><b>●</b>&nbsp; Computer Engineering — University of Alabama · Class of 2028</p>
+
+      <!-- The name is the headline -->
+      <h1>
+        <span class="first stage d2">Joseph</span>
+        <span class="last stage d3">Mire</span>
+      </h1>
+
+      <p class="role stage d4">I build things that fly, print, &amp; serve<em>.</em></p>
+
+      <p class="lede stage d5">
+        From <strong>FPV racing drones</strong> and custom sensor PCBs to a self-built
+        3D printer and a home datacenter — I work where hardware meets software,
+        and I like to understand every layer in between.
       </p>
-      <div class="hero-btns">
-        <a href="projects.html" class="btn">View My Projects</a>
-        <a href="resume.html"   class="btn btn-outline">View Resume</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><strong>3+</strong><span>Projects</span></div>
-        <div class="stat"><strong>2</strong><span>Internships</span></div>
-        <div class="stat"><strong>2028</strong><span>Graduating</span></div>
+      <div class="hero-btns stage d6">
+        <a class="btn btn-solid" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
-    <!-- Add your photo: upload a file called profile.jpg into the images/ folder -->
-    <img
-      src="images/profile.jpg"
-      alt="Profile photo"
-      class="hero-photo"
-    />
+
+    <!-- Drop profile.jpg into images/ — the frame is already set up -->
+    <figure class="plate">
+      <img src="images/profile.jpg" alt="Joseph Mire" />
+      <figcaption><span>fig. 01</span></figcaption>
+    </figure>
+  </div>
+
+  <!-- signature: flight path draws itself on load -->
+  <svg class="flight" viewBox="0 0 1400 260" preserveAspectRatio="none" aria-hidden="true">
+    <path class="trace" d="M -20 235 C 220 235 260 120 460 140 C 640 158 700 225 900 190 C 1080 158 1140 60 1420 55" />
+    <circle class="wp w1" cx="180" cy="222" r="4.5"/>
+    <text class="w1" x="180" y="208" text-anchor="middle">BUILD</text>
+    <circle class="wp w2" cx="560" cy="150" r="4.5"/>
+    <text class="w2" x="560" y="136" text-anchor="middle">TUNE</text>
+    <circle class="wp w3" cx="960" cy="180" r="4.5"/>
+    <text class="w3" x="960" y="166" text-anchor="middle">FLY</text>
+    <circle class="wp w4" cx="1300" cy="72" r="4.5"/>
+    <text class="w4" x="1300" y="58" text-anchor="middle">REPEAT</text>
+  </svg>
+</section>
+
+<!-- ── Spec strip ── -->
+<div class="spec">
+  <div class="spec-inner">
+    <div class="spec-item reveal"><strong>4.00</strong><span>GPA · B.S. Comp. Engineering</span></div>
+    <div class="spec-item reveal"><strong>2</strong><span>Internships · Research &amp; Industry</span></div>
+    <div class="spec-item reveal"><strong>Co-Founder</strong><span>Ripping Tide — UA Drone Racing</span></div>
+    <div class="spec-item reveal"><strong>2028</strong><span>Expected Graduation</span></div>
+  </div>
+</div>
+
+<!-- ── Projects ── -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Projects</h2>
+      <p class="tag">Selected Builds</p>
+    </div>
+    <div class="proj-grid">
+
+      <article class="proj reveal">
+        <div class="proj-img">
+          <span class="tag">Airframe</span>
+          <img src="images/drone.webp" alt="Custom 5-inch freestyle FPV drone" />
+        </div>
+        <div class="proj-body">
+          <h3>5″ Freestyle FPV Drone</h3>
+          <p>
+            A custom, high-performance first-person view drone with 5-inch propellers. With at least dozens of hours of flight experience on this quad, some of my best videos include diving down a waterfall and chasing a moving sports car.
+          </p>
+          <div class="chips">
+            <span class="chip">Betaflight</span><span class="chip">Soldering</span>
+            <span class="chip">DJI Video</span><span class="chip">FAA Part 107</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-img">
+          <span class="tag">Fabrication</span>
+          <img src="images/voron.webp" alt="Voron 0.2 3D printer" />
+        </div>
+        <div class="proj-body">
+          <h3>Voron 0.2 Printer</h3>
+          <p>
+            A compact, core-xy 3D printer designed for unlimited customization and control. Building this machine from scratch allowed me to understand the inner workings of Klipper and how these printers work, and I've used it to print some of my own designs.
+          </p>
+          <div class="chips">
+            <span class="chip">CoreXY</span><span class="chip">Klipper</span>
+            <span class="chip">CAD</span><span class="chip">Hardware Assembly</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-img">
+          <span class="tag">Infrastructure</span>
+          <img src="images/proxmox.webp" alt="Proxmox homelab dashboard" />
+        </div>
+        <div class="proj-body">
+          <h3>Proxmox Homelab</h3>
+          <p>
+            A bare-metal hypervisor server used to host various services including Immich, Home Assistant, and Twingate. Maintaining and configuring this server significantly increased my knowledge and interest in computer networking as well as the robust capabilities that these virtualized environments provide.
+          </p>
+          <div class="chips">
+            <span class="chip">Proxmox VE</span><span class="chip">LXC</span>
+            <span class="chip">Networking</span><span class="chip">Twingate</span><span class="chip">Cloudflared</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
-<!-- ── About ── -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-sub">A little more about who I am and what drives me.</p>
-    <div class="grid">
+<!-- ── Experience ── -->
+<section class="xp" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Experience</h2>
+      <p class="tag">Research · leadership · work</p>
+    </div>
+    <div class="xp-grid">
 
-      <div class="card">
-        <h3>Background</h3>
-        <p>
-          Currently a Junior at the University of Alabama, I balance my engineering
-          curriculum with active leadership and community involvement. I am the 
-          Vice-President and co-founder of Ripping Tide, UA's drone racing team, 
-          where I teach students how to build, fly, and program FPV drones. Additionally, 
-          I hold my FAA Part 107 Commercial Drone License and stay very active with 
-          Bama Catholic, my school's Catholic community.
-        </p>
+      <div class="reveal">
+        <h3>// Experience</h3>
+        <div class="xp-item">
+          <h4>REU Sensor Researcher — Clarkson University</h4>
+          <p class="meta">May 2026 – Jul 2026</p>
+          <p>Developed a power efficient firmware for a custom PCB board featuring an LMP91000 sensor, as part of a Research Experience for
+          Undergraduates program.</p>
+        </div>
+        <div class="xp-item">
+          <h4>Athletics Security Intern — Andy Frain Services</h4>
+          <p class="meta">Sept 2025 – Present</p>
+          <p>Manage the access-control credential system for Bryant-Denny Stadium
+          (100k+ capacity). Set up metal detectors and bike racks in anticipation of game day.</p>
+        </div>
+        <div class="xp-item">
+          <h4>Drone Light Show Volunteer — Pixis Drones</h4>
+          <p class="meta">Oct 2024</p>
+          <p>Participated in calibrating, placing, and inserting batteries for 500 light-show drones.</p>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Interests</h3>
-        <p>
-          My technical interests heavily revolve around coding, FPV drone racing,
-          3D printing, and homelabbing. I have experience building several racing drones
-          alongside a custom 5-inch freestyle quad. Additionally, I built a Voron 0.2 3D printer
-          from scratch and maintain a Proxmox server to host various services such as
-          Immich and Home Assistant.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Currently Learning</h3>
-        <p>
-          I am constantly looking to expand my technical and life horizons, and 
-          am currently focusing on advancing my knowledge of drones, web development, 
-          and network infrastructure. Additionally, I am exploring the best ways to integrate
-          AI in my learning and projects.
-        </p>
+      <div class="reveal">
+        <h3>// Leadership &amp; Education</h3>
+        <div class="xp-item">
+          <h4>Co-Founder &amp; Vice President — Ripping Tide Drone Racing</h4>
+          <p class="meta">Aug 2026 – Present · President 2025–26</p>
+          <p>Co-founded UA's official drone racing team to foster campus interest in FPV flight and engineering. Teach students how to build, program, and fly competitive drones while practicing efficient flying techniques.</p>
+        </div>
+        <div class="xp-item">
+          <h4>B.S. Computer Engineering — University of Alabama</h4>
+          <p class="meta">2024 – 2028 · GPA 4.00 · Minors: Math, CS</p>
+          <p>Coursework: Digital Logic, Microcomputers, Electric Circuits.</p>
+        </div>
+        <div class="xp-item">
+          <h4>Saint Paul's School</h4>
+          <p class="meta">2020 – 2024</p>
+          <p>Valedictorian · National Merit Finalist.</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── Footer ── -->
+<!-- ── Skills ── -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Skills</h2>
+      <p class="tag">Hardware · software</p>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-cell">
+        <h3>// Programming</h3>
+        <ul><li>Python</li><li>C++</li><li>Java</li><li>Arduino</li></ul>
+      </div>
+      <div class="skill-cell">
+        <h3>// Drones &amp; Flight</h3>
+        <ul><li>FAA Part 107</li><li>Betaflight</li><li>FPV Piloting</li><li>DJI Systems</li></ul>
+      </div>
+      <div class="skill-cell">
+        <h3>// Electronics &amp; Fabrication</h3>
+        <ul><li>Soldering</li><li>PCB Work</li><li>3D Printing</li><li>CAD</li></ul>
+      </div>
+      <div class="skill-cell">
+        <h3>// Systems &amp; Infrastructure</h3>
+        <ul><li>Proxmox VE</li><li>Linux</li><li>Networking</li><li>Home Assistant</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <h2>Let's<br><span>connect.</span></h2>
+    <p>Open to internships, research collaborations, and interesting
+    conversations.</p>
+    <div class="contact-row">
+      <a class="btn btn-solid" href="mailto:jmmire@crimson.ua.edu">jmmire@crimson.ua.edu</a>
+      <a class="btn btn-ghost" href="https://github.com/jmmire1" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/joseph-mire/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <p>Built with plain HTML &amp; CSS &mdash; hosted free on GitHub Pages.</p>
-  <p style="margin-top:.4rem;">
-    <a href="https://github.com/jmmire1">GitHub</a> &nbsp;·&nbsp;
-    <a href="https://www.linkedin.com/in/joseph-mire/">LinkedIn</a>
-  </p>
+  <div class="wrap foot">
+    <span>© 2026 Joseph Mire</span>
+    <span><a href="https://github.com/jmmire1" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/joseph-mire/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>

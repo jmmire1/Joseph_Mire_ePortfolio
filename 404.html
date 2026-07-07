@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404: Page Not Found — Joseph Mire</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23161f38%22 stroke=%22%2324324f%22 stroke-width=%224%22/><text y=%2268%22 x=%2250%22 font-family=%22'Fira Code', monospace%22 font-weight=%22900%22 font-size=%2252%22 fill=%22%2300ff9d%22 text-anchor=%22middle%22 letter-spacing=%22-2%22>JM</text></svg>">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 — Signal Lost</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%23181C20%22/><text y=%2270%22 x=%2250%22 font-family=%22Arial Narrow, sans-serif%22 font-weight=%22800%22 font-size=%2250%22 fill=%22%232EE889%22 text-anchor=%22middle%22>404</text></svg>">
+<style>
+  .err-container {
+    min-height: calc(100vh - 3.9rem - 53px); /* fits between header and footer */
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .err-content {
+    position: relative;
+    z-index: 2;
+    max-width: 36rem;
+  }
+  .hero h1 .error-code {
+    display: block;
+    color: var(--green);
+    text-shadow: 0 0 60px rgba(46,232,137,.35);
+  }
+</style>
 </head>
 <body>
 
-<nav>
-  <input type="checkbox" id="nav-toggle" />
-  <div class="nav-inner">
-    <span class="nav-brand">Joseph Mire</span>
-    <label class="nav-toggle-label" for="nav-toggle"><span></span></label>
+<!-- ── Nav ── -->
+<header>
+  <nav class="nav" aria-label="Main">
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <a class="brand" href="index.html#top">JOSEPH<em>_</em>MIRE</a>
+    <label class="nav-burger" for="nav-toggle" aria-label="Menu"><span></span></label>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="nav-cta" href="resume.pdf" download>Resume ↓</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<section class="section" style="display: flex; align-items: center; min-height: calc(100vh - 7.5rem); padding: 2rem 0;">
-  <div class="container" style="max-width: 650px; width: 100%;">
+<!-- ── 404 Hero Section ── -->
+<section class="hero err-container">
+  <div class="wrap err-content">
+    <p class="tag stage d1"><b>●</b>&nbsp; STATUS_ROUTE_FAILURE</p>
     
-    <!-- Terminal Window Container -->
-    <div class="card" style="padding: 0; overflow: hidden; border-color: #ef4444; box-shadow: 0 0 20px rgba(239, 68, 68, 0.1);">
-      
-      <!-- Terminal Window Header Header -->
-      <div style="background: rgba(239, 68, 68, 0.1); border-bottom: 1px solid var(--border); padding: 0.6rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
-        <span style="width: 10px; height: 10px; background: #ef4444; border-radius: 50%;"></span>
-        <span style="width: 10px; height: 10px; background: #f59e0b; border-radius: 50%;"></span>
-        <span style="width: 10px; height: 10px; background: #10b981; border-radius: 50%;"></span>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #ef4444; margin-left: auto; font-weight: bold;">CRITICAL_EXCEPTION_HANDLER</span>
-      </div>
+    <h1>
+      <span class="first stage d2">Error</span>
+      <span class="error-code stage d3">404</span>
+    </h1>
 
-      <!-- Terminal Body Content -->
-      <div style="padding: 2rem; font-family: var(--font-mono);">
-        <h1 style="font-size: 3.5rem; color: #ef4444; line-height: 1; margin-bottom: 1rem; font-weight: 800;">404</h1>
-        
-        <div style="margin-bottom: 1.5rem;">
-          <p style="color: var(--text); font-weight: bold; margin-bottom: 0.25rem;">&gt; ERROR: Address_Resolution_Failure</p>
-          <p style="color: var(--muted); font-size: 0.88rem; font-family: var(--font-sans);">The requested pointer memory address does not point to a valid index file in this repository route.</p>
-        </div>
+    <p class="role stage d4">Signal lost<em>.</em> Telemetry down.</p>
 
-        <div style="background: rgba(0,0,0,0.2); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius); margin-bottom: 2rem; font-size: 0.85rem; line-height: 1.5; color: #f59e0b;">
-          Status: Interrupted<br>
-          Signal: SIGSEGV (Segmentation Fault)<br>
-          Action: Redirect packet back to safe sector core.
-        </div>
-
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="index.html" class="btn" style="border-color: var(--accent); color: var(--accent); text-shadow: none; box-shadow: 0 0 10px rgba(0, 255, 157, 0.1);">cd /home</a>
-          <a href="projects.html" class="btn btn-outline">view_projects()</a>
-        </div>
-      </div>
-
+    <p class="lede stage d5">
+      The coordinates you targeted don't exist. The flight path led off the map—either this URL was mistyped, or the packet dropped somewhere along the routing table. Let's get you back to homebase.
+    </p>
+    
+    <div class="hero-btns stage d6">
+      <a class="btn btn-solid" href="index.html">Return to Homebase</a>
+      <a class="btn btn-ghost" href="index.html#projects">View Projects</a>
     </div>
-
   </div>
+
+  <!-- Flight path animation vector matching original labels -->
+  <svg class="flight" viewBox="0 0 1400 260" preserveAspectRatio="none" aria-hidden="true">
+    <path class="trace" d="M -20 235 C 220 235 260 120 460 140 C 640 158 700 225 900 190 C 1080 158 1140 60 1420 55" />
+    <circle class="wp w1" cx="180" cy="222" r="4.5"/>
+    <text class="w1" x="180" y="208" text-anchor="middle">BUILD</text>
+    <circle class="wp w2" cx="560" cy="150" r="4.5"/>
+    <text class="w2" x="560" y="136" text-anchor="middle">TUNE</text>
+    <circle class="wp w3" cx="960" cy="180" r="4.5"/>
+    <text class="w3" x="960" y="166" text-anchor="middle">FLY</text>
+    <circle class="wp w4" cx="1300" cy="72" r="4.5"/>
+    <text class="w4" x="1300" y="58" text-anchor="middle">REPEAT</text>
+  </svg>
 </section>
 
+<!-- ── Footer ── -->
 <footer>
-  <p>Built with plain HTML &amp; CSS &mdash; hosted free on GitHub Pages.</p>
-  <p style="margin-top:.4rem;">
-    <a href="https://github.com/jmmire1">GitHub</a> &nbsp;·&nbsp;
-    <a href="https://www.linkedin.com/in/joseph-mire/">LinkedIn</a>
-  </p>
+  <div class="wrap foot">
+    <span>© 2026 Joseph Mire</span>
+    <span><a href="https://github.com/jmmire1" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/joseph-mire/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
