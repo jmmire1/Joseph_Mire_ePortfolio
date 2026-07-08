@@ -96,13 +96,40 @@
 
       <article class="proj reveal">
         <div class="proj-img">
-          <span class="tag">Airframe</span>
+          <a class="proj-link" href="https://github.com/sigmondkukla/lmp91000"
+            target="_blank" rel="noopener" aria-label="View source on GitHub">
+            GitHub ↗
+          </a>
+          <img src="images/potentiostat.webp" alt="Potentiostat PCB" />
+        </div>
+        <div class="proj-body">
+          <h3>Wireless Electrochemical Sensor</h3>
+          <p>
+            Developed firmware for a custom electrochemical sensing PCB during an
+            REU program at Clarkson University. An EFR32BG24 sleeps between RTC-scheduled wakeups, samples an
+            LMP91000 sensor, and streams data over BLE, with timekeeping built for timestamp logging.
+          </p>
+          <div class="chips">
+            <span class="chip">Simplicity Studio</span><span class="chip">EFR32BG24</span>
+            <span class="chip">Custom PCB</span><span class="chip">C++/C</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-img">
+          <a class="proj-link" href="https://youtu.be/SDRGi0zWlUs"
+            target="_blank" rel="noopener" aria-label="View waterfall video">
+            Video Footage ↗
+          </a>
           <img src="images/drone.webp" alt="Custom 5-inch freestyle FPV drone" />
         </div>
         <div class="proj-body">
           <h3>5″ Freestyle FPV Drone</h3>
           <p>
-            A custom, high-performance first-person view drone with 5-inch propellers. With over 100 flight hours on quads, some of my best videos include diving down a waterfall and chasing a moving sports car.
+            A custom freestyle quad built from sourced components and 
+            programmed in Betaflight. With over 100 flight hours on quads, some of my videos 
+            include a waterfall dive and a moving sports car chase.
           </p>
           <div class="chips">
             <span class="chip">Betaflight</span><span class="chip">Soldering</span>
@@ -113,7 +140,6 @@
 
       <article class="proj reveal">
         <div class="proj-img">
-          <span class="tag">Fabrication</span>
           <img src="images/voron.webp" alt="Voron 0.2 3D printer" />
         </div>
         <div class="proj-body">
@@ -128,24 +154,39 @@
         </div>
       </article>
 
-      <article class="proj reveal">
-        <div class="proj-img">
-          <span class="tag">Infrastructure</span>
-          <img src="images/proxmox.webp" alt="Proxmox homelab dashboard" />
-        </div>
-        <div class="proj-body">
-          <h3>Proxmox Homelab</h3>
-          <p>
-            A bare-metal hypervisor server used to host various services including Immich, Home Assistant, and Twingate. Maintaining and configuring this server significantly increased my knowledge and interest in computer networking as well as the robust capabilities that these virtualized environments provide.
-          </p>
-          <div class="chips">
-            <span class="chip">Proxmox VE</span><span class="chip">LXC</span>
-            <span class="chip">Networking</span><span class="chip">Twingate</span><span class="chip">Cloudflared</span>
-          </div>
-        </div>
-      </article>
-
     </div>
+
+    <div class="proj-more" id="more-projects">
+      <div class="proj-more-inner">
+        <div class="proj-grid">
+          <!-- your extra project cards here, same <article class="proj reveal"> markup -->
+
+          <article class="proj reveal">
+            <div class="proj-img">
+              <img src="images/proxmox.webp" alt="Proxmox homelab dashboard" />
+            </div>
+            <div class="proj-body">
+              <h3>Proxmox Homelab</h3>
+              <p>
+                A bare-metal hypervisor server used to host various services including Immich, Home Assistant, and Twingate. Maintaining and configuring this server significantly increased my knowledge and interest in computer networking as well as the robust capabilities that these virtualized environments provide.
+              </p>
+              <div class="chips">
+                <span class="chip">Proxmox VE</span><span class="chip">LXC</span>
+                <span class="chip">Networking</span><span class="chip">Twingate</span><span class="chip">Cloudflared</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-ghost more-btn" aria-expanded="false" aria-controls="more-projects">
+      <span>More builds</span>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
   </div>
 </section>
 

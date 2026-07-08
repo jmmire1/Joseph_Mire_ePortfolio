@@ -3,6 +3,22 @@
    ============================================================ */
 
 (function () {
+  var moreBtn = document.querySelector('.more-btn');
+  var morePanel = document.getElementById('more-projects');
+  if (moreBtn && morePanel) {
+    moreBtn.addEventListener('click', function () {
+      var open = morePanel.classList.toggle('open');
+      moreBtn.setAttribute('aria-expanded', open);
+      moreBtn.querySelector('span').textContent = open ? 'Fewer builds' : 'More builds';
+      if (open) {
+        morePanel.querySelectorAll('.reveal').forEach(function (el, i) {
+          el.style.transitionDelay = i * 90 + 'ms';
+          el.classList.add('in');
+        });
+      }
+    });
+  }
+
   // Respect users who prefer reduced motion: show everything immediately
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('.reveal').forEach(function (el) {
