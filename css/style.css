@@ -103,7 +103,7 @@ header{
 /* THE NAME — the headline of the whole site */
 .hero h1{
   font-family:var(--display);font-weight:800;
-  font-size:clamp(4.6rem,14.5vw,11.5rem);
+  font-size:clamp(3.2rem, 9vw, 7.5rem);
   line-height:.85;letter-spacing:.005em;text-transform:uppercase;
   margin:.5rem 0 0 -.04em;
 }
