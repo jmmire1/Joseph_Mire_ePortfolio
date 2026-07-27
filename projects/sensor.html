@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joseph Mire - Wireless Electrochemical Sensor</title>
+<meta name="description" content="Wireless Electrochemical Sensor — firmware for a custom potentiostat PCB, developed during an REU program at Clarkson University." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2212%22 fill=%22%23181C20%22/><text y=%2270%22 x=%2250%22 font-family=%22Arial Narrow, sans-serif%22 font-weight=%22800%22 font-size=%2250%22 fill=%22%232EE889%22 text-anchor=%22middle%22>JM</text></svg>">
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<header>
+  <nav class="nav" aria-label="Main">
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <a class="brand" href="../index.html#top">JOSEPH<em>_</em>MIRE</a>
+    <label class="nav-burger" for="nav-toggle" aria-label="Menu"><span></span></label>
+    <ul class="nav-links">
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a class="nav-cta" href="../resume.pdf" download>Resume ↓</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ── Project Hero ── -->
+<section class="hero sensor-hero" id="top">
+  <div class="wrap sensor-hero-inner">
+    <p class="tag stage d1"><b>●</b>&nbsp; Project</p>
+    <h1>
+      <span class="first stage d2">Wireless</span>
+      <span class="last stage d3">Sensor</span>
+    </h1>
+    <p class="lede stage d5">
+      Developed firmware for a custom electrochemical sensing PCB during an REU program at Clarkson University. 
+      An EFR32BG24 sleeps between RTC-scheduled wakeups, samples an LMP91000 sensor, and streams 
+      data over BLE, with timekeeping built for timestamp logging.
+    </p>
+    <div class="hero-btns stage d6">
+      <a class="btn btn-solid" href="https://github.com/sigmondkukla/lmp91000" target="_blank" rel="noopener">Source on GitHub ↗</a>
+      <a class="btn btn-ghost" href="../index.html#projects">← Back to projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Documents ── -->
+<section class="projects" id="documents">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Documents</h2>
+      <p class="tag">Report &amp; poster</p>
+    </div>
+    <div class="doc-grid">
+
+      <article class="doc-card reveal">
+        <iframe class="doc-frame" src="sensor/power_management_report.pdf" title="Project report preview"></iframe>
+        <div class="doc-body">
+          <h3>Project Report</h3>
+          <p>Full report covering the sensor's firmware design and power management results.</p>
+          <div class="doc-btns">
+            <a class="btn btn-solid" href="sensor/power_management_report.pdf" target="_blank" rel="noopener">View ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="doc-card reveal">
+        <iframe class="doc-frame" src="sensor/power_management_presentation.pdf" title="Project poster preview"></iframe>
+        <div class="doc-body">
+          <h3>Project Poster</h3>
+          <p>Conference poster summarizing the project for presentation.</p>
+          <div class="doc-btns">
+            <a class="btn btn-solid" href="sensor/power_management_presentation.pdf" target="_blank" rel="noopener">View ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Joseph Mire</span>
+    <span><a href="https://github.com/jmmire1" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/joseph-mire/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

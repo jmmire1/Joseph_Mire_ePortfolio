@@ -439,3 +439,47 @@ footer a:hover{color:var(--green)}
 
 /* hero manages its own spacing — don't stack generic section padding on it */
 section.hero{padding:0}
+
+/* ── Project sub-pages: document preview cards ──────────────── */
+.doc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+@media (max-width:840px){.doc-grid{grid-template-columns:1fr}}
+.doc-card{
+  border:1px solid var(--line);background:var(--card);
+  border-radius:calc(var(--radius) + 4px);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:border-color .25s,transform .25s var(--ease),box-shadow .25s;
+}
+.doc-card:hover{
+  border-color:rgba(46,232,137,.55);transform:translateY(-4px);
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.7),0 0 30px -6px var(--green-glow);
+}
+.doc-frame{
+  aspect-ratio:8.5/11;width:100%;border:none;border-bottom:1px solid var(--line);
+  background:var(--bg-soft);
+}
+.doc-body{padding:1.4rem 1.4rem 1.6rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
+.doc-body h3{font-family:var(--display);font-weight:700;font-size:1.4rem;text-transform:uppercase;line-height:1;color:var(--ink)}
+.doc-body p{color:var(--muted);font-size:.95rem}
+.doc-btns{display:flex;gap:.7rem;margin-top:auto;flex-wrap:wrap}
+.overview-list{display:flex;flex-direction:column;gap:1rem;max-width:44rem}
+.overview-list li{color:var(--ink-2);font-size:1.02rem;padding-left:1.2rem;position:relative}
+.overview-list li::before{
+  content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;
+  background:var(--green);border-radius:2px;box-shadow:0 0 10px rgba(46,232,137,.7);
+}
+
+/* project hero — potentiostat PCB as a background plate (sensor.html) */
+.sensor-hero{
+  border-bottom:none;
+  background:
+    linear-gradient(180deg, rgba(7,10,16,.35) 0%, rgba(7,10,16,.85) 62%, var(--bg) 100%),
+    url('../images/potentiostat.webp') center 38%/cover no-repeat;
+}
+.sensor-hero-inner{
+  position:relative;z-index:2;
+  min-height:50vh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding-top:clamp(3rem,7vw,5rem);
+  padding-bottom:clamp(1.5rem,3vw,2.5rem);
+}
+#documents{padding-top:clamp(2rem,4vw,3rem);border-top:none}
