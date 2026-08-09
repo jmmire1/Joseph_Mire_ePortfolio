@@ -366,7 +366,7 @@ footer{
   border-top:1px solid var(--line);
   font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
 }
-.foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.4rem 0}
+.foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1.4rem;padding-bottom:1.4rem;}
 footer a{transition:color .2s}
 footer a:hover{color:var(--green)}
 
